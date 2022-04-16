@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+     
+       f1("h");
+            function f1()
+            {
+                var char=document.getElementById("t1").value;
+                let c=char.toUpperCase();
+            if(char.length==1)
+            {
+                switch(c)
+                {
+                    default :document.getElementById("d1").innerHTML=char +" is a consonent";
+                    break;
+                    case "A":document.getElementById("d1").innerHTML=char +" is a Vovel";
+                    break;
+                    case "E":document.getElementById("d1").innerHTML=char +" is a Vovel";
+                    break;
+                    case "I":document.getElementById("d1").innerHTML=char +" is a Vovel";
+                    break;
+                    case "O":document.getElementById("d1").innerHTML=char +" is a Vovel";
+                    break;
+                    case "U":document.getElementById("d1").innerHTML=char +" is a Vovel";
+                    break;
+                }
+            }
+             
+             }
+            </script>
+    </head>
+    <body>
+            <label>Please Enter a Vovel :</label>
+            <input type="text" id="t1" placeholder="Plz enter Single Character"><button onclick="f1()">Check</button>
+            <br>
+             <div id="d1"></div>
+    </body>
+</html>

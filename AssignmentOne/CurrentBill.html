@@ -1,0 +1,64 @@
+<head>
+        <script>
+            
+                   f1();
+                   function f1()
+                   {
+                      var units=document.getElementById("t1").value;
+                      var totalbill=0;
+                       
+                      
+
+                        var reunits50=units-50;
+                      
+                       
+                        
+                        if(reunits50>0)
+                        {
+                            totalbill=totalbill+(50*0.50);
+                            units=reunits50;
+                            var reunits100=units-100;
+                            if(reunits100>0)
+                            {
+                                totalbill=totalbill+(100*0.75);
+                                  units=reunits100;
+                                  var reunitsnext100=units-100;
+                                  if(reunitsnext100>0)
+                                  {
+                                    totalbill=totalbill+(100*1.20);
+                                   totalbill=totalbill+(reunitsnext100*1.50);
+
+                                  }   
+                                  else
+                                  {
+                                      totalbill=totalbill+(units*1.20);
+                                  }
+                            }
+                            else
+                            {
+                                totalbill=totalbill+(units*0.75);
+                            }
+                        }
+                        else
+                        {
+                            totalbill=totalbill+(units*0.50);
+                        }
+                      
+                        totalbill=totalbill+(totalbill*20/100)
+                        
+                      document.getElementById("d1").innerHTML="TotalBill is :"+totalbill;
+                       
+                        
+                   }
+
+            
+            </script>
+    </head>
+    <body>
+        <label>Please Enter Bil Units :</label>
+        <input type="text" id="t1"><button onclick="f1()">Calculate</button>
+        <br>
+         <div id="d1"></div>
+
+    </body>
+</html>

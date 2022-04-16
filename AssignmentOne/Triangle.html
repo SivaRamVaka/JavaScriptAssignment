@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+            function f1()
+            {
+                var a=parseInt(document.getElementById("a1").value);
+                var b=parseInt(document.getElementById("b1").value);
+                var c=parseInt(document.getElementById("c1").value);
+               // alert(a1+" "+b1+" "+c1)
+                if(a==b && a==c)
+                {
+                    document.getElementById("d1").innerHTML="triangle is said Equilateral Triangle";
+                }
+                else if( a == b || a == c || b == c)
+                {
+                    document.getElementById("d1").innerHTML="triangle is said Isosceles Triangle";
+                }
+                else if(a !=b ||a!=c || b!=c)
+                {
+                    document.getElementById("d1").innerHTML="triangle is said  Scalene Triangle";
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+<label>Plez Enter triangle angle: </label>
+        <input type="text"id="a1">:A
+        <input type="text" id="b1"> :C
+        <input type="text" id="c1">:C
+        <br>
+        <button onclick="f1()">Check</button>
+        <div id="d1"></div>
+    </body>
+</html>

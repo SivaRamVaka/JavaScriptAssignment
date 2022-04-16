@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script>
+            var fno=0;
+            var sno=0;
+            var symbol="";
+            var result=0;
+         
+            function f1(data)
+            {
+                fno=parseInt(document.getElementById("t1").value) ;
+               symbol=data;
+               document.getElementById("t1").value="";
+               // document.write(symbol);
+            }
+            function f2()
+            {
+                sno=parseInt(document.getElementById("t1").value);
+                console.log(symbol);
+                console.log(fno);
+                console.log(sno);
+                switch(symbol)
+                {
+                   
+                    case "+": result=fno+sno;
+                    break;
+                    case "-":result=fno-sno;
+                    break;
+                    case "/":result=fno/sno;
+                    break;
+                    case "*":result=fno*sno;
+                    break;
+                }
+               symbol="";
+                document.getElementById("t1").value=result;
+            }
+            function f3()
+            {
+                document.getElementById("t1").value="";
+                symbol="";
+            }
+            </script>
+    </head>
+    <body>
+        <h2>Calculator</h2>
+        <input type="text" id="t1" placeholder="0">
+        <br>
+        <input type="button" value="+" name="+" id="op" onclick="f1('+')">
+        <input type="button" value="-" name="-" id="op" onclick="f1('-')">
+        <input type="button" value="*" name="*" id="op" onclick="f1('*')">
+        <input type="button" value="/" name="/" id="op" onclick="f1('/')">
+        <input type="button" value="=" name="=" id="op" onclick="f2()">
+        <input type="button" value="clear" name="clear" id="op" onclick="f3()">
+ 
+
+       
+    </body>
+</html>
