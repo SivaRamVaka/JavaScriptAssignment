@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            f1();
+            function f1()
+            {
+                var input=document.getElementById("t1").value;
+                var arr=input.split(',');
+                var result="["
+                for(var i=0;i<arr.length;i++)
+                {
+                  for(var j=i+1;j<=arr.length;j++)
+                  {
+                     if(arr[i]>arr[j])
+                     {
+                         var aa=arr[i];
+                         arr[i]=arr[j];
+                         arr[j]=aa;
+                     }
+                  }
+                  
+                }
+
+                for(var k=0;k<arr.length;k++)
+                {
+                    result=result+arr[k]+",";
+                }
+                document.getElementById("d1").innerHTML=result+"]";
+            }
+            
+            </script>
+    </head>
+    <body>
+            <label>Enter A String :</label>
+            <input type="text" id="t1" placeholder="please enter a , separated array">
+            <button onclick="f1()">Check</button><br>
+            <div id="d1"></div>
+    </body>
+</html>

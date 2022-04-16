@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script>
+           
+            function f1()
+            {
+                var input=document.getElementById("t1").value;
+
+             var arr= input.split(',')  ;
+             var selement=document.getElementById("t2").value;
+              
+             var str="";
+             var final="["
+             for(var i=0;i<arr.length;i++)
+             {
+               
+                 if(arr[i]==selement)
+                     {
+                        str=str+i;
+                     }
+             }
+             var indexarr=str.split("");
+             if(indexarr.length==0)
+             {
+              document.getElementById("d1").innerHTML="-1";
+             }
+             else{
+                 
+                for(var k=0;k<indexarr.length;k++)
+             {
+                          // console.log(indexarr[k]);
+                          final=final+indexarr[k]+",";
+             }
+             final=final+"]";
+             document.getElementById("d1").innerHTML=final;
+             }
+            
+            }
+            </script>
+    </head>
+    <body>
+            <label>Enter A String :</label>
+            <input type="text" id="t1" placeholder="please enter numbers , saperated">
+            <input type="text" id="t2" placeholder="select search element">
+            <button onclick="f1()">Check</button><br>
+            <div id="d1"></div>
+    </body>
+</html>

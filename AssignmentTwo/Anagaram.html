@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script>
+            
+   f1();
+                   function f1()
+                   {
+                       var str1=document.getElementById("t1").value;
+                       var str2=document.getElementById("t2").value;
+                       var strarr1=str1.toLowerCase().split("").sort();
+                       var strarr2=str2.toLowerCase().split("").sort();
+                     
+                         var result;
+                       if(str1.length !=str2.length)
+                       {
+                          result=false;
+                       }
+                       else
+                       {
+                           for(var i=0;i<strarr1.length;i++)
+                           {
+                              if(strarr1[i]==strarr2[i])
+                              {
+                                  result=true;
+                              }
+                              else
+                              {
+                                  result=false;
+                              }
+                           }
+                       }
+
+                       if(result==true)
+                       {
+                         document.getElementById("d1").innerHTML= "the given string is anagram";
+                       }
+                       else
+                       {
+                        document.getElementById("d1").innerHTML= "the given string is not anagram";
+                       }
+                       
+                   }
+
+            
+            </script>
+    </head>
+    <body>
+       <label>Please Enter Strings :</label>
+       <input type="text" id="t1" placeholder="first string">
+       <input type="text" id="t2" placeholder="second String">
+       <button onclick="f1()">Check</button><br>
+       <div id="d1"></div>
+    </body>
+</html>
